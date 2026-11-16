@@ -1,0 +1,318 @@
+/* src/index.css */
+
+/* 1. PALETA DE COLORES CORPORATIVA D'ÁUREA */
+:root {
+  --color-gold: #C5A059;
+  --color-cream: #F7F2ED;
+  --color-espresso: #2C221E;
+  --color-white: #FFFFFF;
+}
+
+/* 2. ESTILOS GLOBALES DE BASE */
+body {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+  background-image:
+    linear-gradient(rgba(247, 242, 237, 0.72), rgba(247, 242, 237, 0.72)),
+    url('/fondo.jfif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--color-espresso);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* 3. BOTONES PERSONALIZADOS */
+.btn-daurea-gold {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-daurea-gold:hover {
+  background-color: #b38e49;
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+/* 4. NAVBAR & FOOTER */
+.bg-daurea-cream {
+  background-color: var(--color-cream) !important;
+}
+
+.bg-daurea-espresso {
+  background-color: var(--color-espresso) !important;
+}
+
+.text-daurea-gold {
+  color: var(--color-gold) !important;
+}
+
+.text-daurea-espresso {
+  color: var(--color-espresso) !important;
+}
+
+.badge-daurea-gold {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+/* 5. HERO BANNER */
+.hero-banner {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/hero-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 6. TARJETAS DE CATEGORÍAS Y PRODUCTOS */
+.category-circle {
+  width: 90px;
+  height: 90px;
+  background-color: var(--color-cream);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-circle:hover {
+  transform: scale(1.05);
+}
+
+.product-card-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Shared page surfaces */
+.page-surface {
+  min-height: 85vh;
+  background-color: transparent;
+}
+
+/* Home */
+.home-hero-image-wrap {
+  max-height: 420px;
+}
+
+.home-hero-image {
+  max-height: 400px;
+}
+
+.featured-product-image-wrap {
+  overflow: hidden;
+}
+
+.featured-product-image {
+  height: 280px;
+  transition: transform 0.3s ease;
+}
+
+.featured-product-button {
+  background-color: var(--color-espresso);
+  border-color: var(--color-espresso);
+  font-size: 0.85rem;
+}
+
+/* Cart */
+.cart-empty-state {
+  min-height: 70vh;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+}
+
+.cart-quantity-control {
+  width: 110px;
+}
+
+/* Catalog and product detail */
+.catalog-title {
+  font-size: 2.5rem;
+}
+
+.catalog-product-image-wrap {
+  height: 240px;
+  overflow: hidden;
+}
+
+.catalog-product-meta {
+  font-size: 0.75rem;
+}
+
+.catalog-product-description {
+  line-height: 1.5;
+}
+
+.catalog-product-button {
+  font-size: 0.85rem;
+}
+
+.catalog-favorite-button {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+}
+
+.product-main-image {
+  height: 400px;
+}
+
+.product-thumbnail {
+  display: block;
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.product-thumbnail.is-selected {
+  border: 2px solid var(--color-espresso);
+  opacity: 1;
+}
+
+.product-thumbnail.is-unselected {
+  opacity: 0.75;
+}
+
+.product-description {
+  line-height: 1.6;
+}
+
+.product-quantity-control {
+  width: 130px;
+}
+
+.product-favorite-button {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+}
+
+.favorite-toggle-button {
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.favorite-toggle-button.is-active {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+.favorite-toggle-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.product-favorite-button .favorite-toggle-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.favorite-toggle-button.is-active .favorite-toggle-icon {
+  fill: currentColor;
+}
+
+/* Favorites and checkout confirmation */
+.wishlist-label,
+.checkout-success-icon {
+  background-color: var(--color-gold);
+}
+
+.wishlist-label,
+.checkout-success-label {
+  font-size: 0.7rem;
+}
+
+.wishlist-product-image {
+  height: 250px;
+}
+
+.wishlist-material-label {
+  background-color: var(--color-espresso);
+  font-size: 0.65rem;
+}
+
+.checkout-success-icon {
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+}
+
+.checkout-success-label {
+  background-color: var(--color-espresso);
+}
+
+/* About */
+.about-label {
+  background-color: var(--color-espresso);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.about-intro {
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.about-copy {
+  line-height: 1.7;
+}
+
+.about-image {
+  height: 380px;
+}
+
+.about-value-copy {
+  line-height: 1.6;
+}
+
+/* Navigation and notifications */
+.navbar-daurea {
+  background-color: rgba(247, 242, 237, 0.97);
+}
+
+.navbar-cart-button {
+  width: 40px;
+  height: 40px;
+}
+
+.toast-container {
+  z-index: 1080;
+}
+
+.app-toast {
+  min-width: 280px;
+  background-color: var(--color-espresso);
+  border-left: 4px solid var(--color-gold) !important;
+}
+
+.app-toast-title {
+  color: var(--color-gold);
+  letter-spacing: 0.5px;
+}
